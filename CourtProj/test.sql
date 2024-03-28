@@ -67,3 +67,6 @@ INSERT INTO bookings (id_court, id_user, date_reservation) VALUES (1, 1, '2021-1
 
 INSERT INTO messages (text, id_user, id_coach, message_date, response) VALUES ('Hello', 1, 1, '2021-12-01', 'Hi');
 
+SELECT * FROM registration_tournaments WHERE user NOT IN (SELECT id_user FROM users) OR tournament NOT IN (SELECT id_tournament FROM tournaments);
+
+INSERT INTO registration_tournaments (user, tournament) VALUES (1, 5);
